@@ -1,0 +1,47 @@
+{% extends 'EventNightBundle::base.html.twig' %}
+
+{% block body %}
+    <h1>Liste d'inscrit à l'évènement</h1>
+
+    <div>
+        <table style="text-align: center">
+            <tr>
+                <th>Type d'utilisateur</th>
+                <th>Etat de l'inscription</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Adresse</th>
+                <th>Ville</th>
+                <th>Cp</th>
+                <th>Mail</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+
+            {% for user in users %}
+                <tr>
+                    <td>{{ user.typeUser }}</a></td>
+                    <td><a href="{{ path('users_show', { 'id': user.id }) }}">{{ user.acces }}</td>
+                    <td>{{ user.nom }}</a></td>
+                    <td>{{ user.prenom }}</td>
+                    <td>{{ user.adresse }}</td>
+                    <td>{{ user.ville }}</td>
+                    <td>{{ user.cp }}</td>
+                    <td>{{ user.mail }}</td>
+                    <td>{{ user.id }}</td>
+                    <td>
+                        <ul>
+                                <a href="{{ path('users_show', { 'id': user.id }) }}">Afficher</a>
+                        </ul>
+                        <ul>
+                                <a href="{{ path('users_edit', { 'id': user.id }) }}">Modifier</a>
+
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+
+        </table>
+    </div>
+
+{% endblock %}

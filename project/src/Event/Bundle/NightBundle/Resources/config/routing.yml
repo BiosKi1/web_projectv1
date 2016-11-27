@@ -1,0 +1,15 @@
+event_night_users:
+    resource: "@EventNightBundle/Resources/config/routing/users.yml"
+    prefix:   /users
+
+event_night_homepage:
+    path:     /
+    defaults: { _controller: EventNightBundle:Default:index }
+
+event_night_back:
+  path: /admin
+  defaults: { _controller: EventNightBundle:Admin:admin }
+
+event_night_new:
+  path: /new
+  defaults: { _controller: EventNightBundle:Users:new}

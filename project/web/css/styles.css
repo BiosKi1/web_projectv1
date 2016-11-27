@@ -1,0 +1,111 @@
+.jumbotron{
+    background-color: #42C29D;
+    color: #fff;
+    text-align: center;
+    padding: 40px;
+}
+
+.h1{
+    background-color: #218BC3;
+}
+
+.navbar, .navbar li a, .navbar .navbar-brand{
+    color:black !important;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size:25px;
+    background: transparent;
+    border-bottom: none;
+    -webkit-box-shadow: none !important;
+}
+
+.navbar-nav li a:hover{
+    background-color: #E9F8F3 !important;
+    color: #E0C2AE !important;
+}
+
+hr{
+    width: 60%;
+    height: 2px;
+    background-color: #42C29D;
+    box-shadow: 2px 2px 5px #629081;
+}
+
+img{
+    width: 1580px;
+    height: 800px;
+    filter: blur(1px);
+}
+body {
+    font-family: 'Indie Flower', cursive;
+    margin: 0;
+    color: #3a3a3a
+}
+
+table, th{
+    margin: auto;
+    text-align: center;
+}
+.bg-black{
+    background-color: #252525;
+    color:#c5c5c5;
+    padding-bottom: 50px;
+}
+
+.fa-envelope-o{
+    font-size:25px;
+    color:#D6BE4C;
+}
+
+.fa-map-marker{
+    font-size:25px;
+    color:#f23232;
+}
+
+.fa-mobile{
+    font-size:25px;
+    color:#42C29D;
+}
+
+.smGlobalBtn{ /* global button class */
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    padding: 0px;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    font-weight: normal;
+    line-height: 2em;
+    border-radius: 25px;
+    -moz-border-radius:25px;
+    -webkit-border-radius:25px;
+}
+
+.facebookBtn{
+    background: #4060A5;
+}
+
+.facebookBtn:hover{
+    color: #4060A5;
+    background: #fff;
+}
+
+.twitterBtn{
+    background: #00ABE3;
+}
+
+.twitterBtn:hover{
+    color: #00ABE3;
+    background: #fff;
+}
+
+.instagramBtn{
+    background: #c68143;
+}
+
+.instagramBtn:hover{
+    color: #000000;
+    background: #fff;
+}
