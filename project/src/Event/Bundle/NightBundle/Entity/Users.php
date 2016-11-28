@@ -10,6 +10,11 @@ class Users
     /**
      * @var string
      */
+    private $mdp;
+
+    /**
+     * @var string
+     */
     private $nom;
 
     /**
@@ -346,5 +351,29 @@ class Users
     public function getCouverture()
     {
         return $this->couverture;
+    }
+
+    /**
+     * Set mdp
+     *
+     * @param string $mdp
+     *
+     * @return Users
+     */
+    public function setMdp($mdp)
+    {
+        $this->mdp = $mdp;
+
+        return $this;
+    }
+
+    /**
+     * Get mdp
+     *
+     * @return string
+     */
+    public function getMdp()
+    {
+        return $this->mdp;
     }
 }
