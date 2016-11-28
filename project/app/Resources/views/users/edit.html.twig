@@ -1,18 +1,18 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-    <h1>User edit</h1>
+    <h1>Modification de l'utilisateur</h1>
 
     {{ form_start(edit_form) }}
         {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
+        <input type="submit" value="Enregistrer les modifications" />
     {{ form_end(edit_form) }}
 
     <lu>
-        <a href="{{ path('users_index') }}">Back to the list</a>
+        <a href="{{ path('users_index') }}">Retour à la liste d'inscrit</a>
     </lu>
     <ul>
         {{ form_start(delete_form) }}
-            <input type="submit" value="Delete">
+            <input type="submit" value="Supprimer l'utilisateur">
         {{ form_end(delete_form) }}
     </ul>
 {% endblock %}
