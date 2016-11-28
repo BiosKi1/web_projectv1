@@ -45,6 +45,17 @@ table, th{
     margin: auto;
     text-align: center;
 }
+
+.fa-eye{
+    color: lightskyblue;
+    font-size: 30px;
+}
+
+.fa-pencil-square{
+    color: lightskyblue;
+    font-size: 30px;
+}
+
 .bg-black{
     background-color: #252525;
     color:#c5c5c5;

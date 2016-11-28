@@ -5,14 +5,12 @@
 
     <div>
         <table style="text-align: center">
-            <tr>
+            <tr style="border-bottom: 1px solid #000">
                 <th>Type d'utilisateur</th>
                 <th>Etat de l'inscription</th>
                 <th>Nom</th>
                 <th>Prenom</th>
                 <th>Adresse</th>
-                <th>Ville</th>
-                <th>Cp</th>
                 <th>Mail</th>
                 <th>Genre du manga</th>
                 <th>Couverture du manga</th>
@@ -21,24 +19,22 @@
             </tr>
 
             {% for user in users %}
-                <tr>
+                <tr style="border-bottom: 1px solid #000">
                     <td>{{ user.typeUser }}</a></td>
                     <td><a href="{{ path('users_show', { 'id': user.id }) }}">{{ user.acces }}</td>
                     <td>{{ user.nom }}</a></td>
                     <td>{{ user.prenom }}</td>
-                    <td>{{ user.adresse }}</td>
-                    <td>{{ user.ville }}</td>
-                    <td>{{ user.cp }}</td>
+                    <td>{{ user.adresse }}, {{ user.cp }} {{ user.ville }}</td>
                     <td>{{ user.mail }}</td>
                     <td>{{ user.genre }}</td>
                     <td>{{ user.couverture }}</td>
                     <td>{{ user.id }}</td>
                     <td>
                         <ul>
-                                <a href="{{ path('users_show', { 'id': user.id }) }}">Afficher</a>
+                                <a href="{{ path('users_show', { 'id': user.id }) }}" data-toggle="tooltip" title="Afficher"><i class="fa fa-eye" aria-hidden="true"></i></a>
                         </ul>
                         <ul>
-                                <a href="{{ path('users_edit', { 'id': user.id }) }}">Modifier</a>
+                                <a href="{{ path('users_edit', { 'id': user.id }) }}" data-toggle="tooltip" title="Modifier"><i class="fa fa-pencil-square" aria-hidden="true"></i></a>
 
                         </ul>
                     </td>

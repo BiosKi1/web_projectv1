@@ -1,5 +1,4 @@
 {% extends 'base.html.twig' %}
-
 {% block body %}
     <h1>User edit</h1>
 
@@ -8,14 +7,12 @@
         <input type="submit" value="Edit" />
     {{ form_end(edit_form) }}
 
+    <lu>
+        <a href="{{ path('users_index') }}">Back to the list</a>
+    </lu>
     <ul>
-        <li>
-            <a href="{{ path('users_index') }}">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
+        {{ form_start(delete_form) }}
+            <input type="submit" value="Delete">
+        {{ form_end(delete_form) }}
     </ul>
 {% endblock %}
