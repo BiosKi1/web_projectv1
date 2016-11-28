@@ -225,5 +225,126 @@ class Users
     {
         return $this->idUser;
     }
-}
+    /**
+     * @var \Event\Bundle\NightBundle\Entity\Autorisation
+     */
+    private $acces;
 
+    /**
+     * @var \Event\Bundle\NightBundle\Entity\TypeUsers
+     */
+    private $typeUser;
+
+
+    /**
+     * Set acces
+     *
+     * @param \Event\Bundle\NightBundle\Entity\Autorisation $acces
+     *
+     * @return Users
+     */
+    public function setAcces(\Event\Bundle\NightBundle\Entity\Autorisation $acces = null)
+    {
+        $this->acces = $acces;
+
+        return $this;
+    }
+
+    /**
+     * Get acces
+     *
+     * @return \Event\Bundle\NightBundle\Entity\Autorisation
+     */
+    public function getAcces()
+    {
+        return $this->acces;
+    }
+
+    /**
+     * Set typeUser
+     *
+     * @param \Event\Bundle\NightBundle\Entity\TypeUsers $typeUser
+     *
+     * @return Users
+     */
+    public function setTypeUser(\Event\Bundle\NightBundle\Entity\TypeUsers $typeUser = null)
+    {
+        $this->typeUser = $typeUser;
+
+        return $this;
+    }
+
+    /**
+     * Get typeUser
+     *
+     * @return \Event\Bundle\NightBundle\Entity\TypeUsers
+     */
+    public function getTypeUser()
+    {
+        return $this->typeUser;
+    }
+
+    public function __toString(){
+
+        return $this->nom;
+
+    }
+    /**
+     * @var string
+     */
+    private $genre;
+
+    /**
+     * @var string
+     */
+    private $couverture;
+
+
+    /**
+     * Set genre
+     *
+     * @param string $genre
+     *
+     * @return Users
+     */
+    public function setGenre($genre)
+    {
+        $this->genre = $genre;
+
+        return $this;
+    }
+
+    /**
+     * Get genre
+     *
+     * @return string
+     */
+    public function getGenre()
+    {
+        return $this->genre;
+    }
+
+    /**
+     * Set couverture
+     *
+     * @param string $couverture
+     *
+     * @return Users
+     */
+    public function setCouverture($couverture)
+    {
+        $this->couverture = $couverture;
+
+        return $this;
+    }
+
+    /**
+     * Get couverture
+     *
+     * @return string
+     */
+    public function getCouverture()
+    {
+        return $this->couverture;
+    }
+}

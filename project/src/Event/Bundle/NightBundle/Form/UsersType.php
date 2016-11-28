@@ -21,6 +21,8 @@ class UsersType extends AbstractType
             ->add('ville')
             ->add('cp')
             ->add('mail', EmailType::class)
+            ->add('genre')
+            ->add('couverture')
             ->add('acces')
             ->add('typeUser')
         ;

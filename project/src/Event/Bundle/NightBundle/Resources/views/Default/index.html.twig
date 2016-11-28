@@ -10,7 +10,7 @@
             <div class="collapse navbar-collapse" id="navB">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="">Inscription</a></li>
+                    <li><a href="{{ path('users_new') }}">Inscription</a></li>
                     <li><a href="{{ path('users_index') }}">Connexion</a></li>
                 </ul>
             </div>
@@ -28,42 +28,44 @@
 
     <div class="container-fluid text-center bg-grey">
         <h2 style="color:#E0893C">Présentation</h2>
+        <div id="mSlide" class="carousel slide" data-ride="carousel">
+            <!-- Bulles -->
+            <ol class="carousel-indicators">
+                <li data-target="#mSlide" data-slide-to="0" class="active"></li>
+                <li data-target="#mSlide" data-slide-to="1"></li>
+                <li data-target="#mSlide" data-slide-to="2"></li>
+            </ol>
 
-    </div>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="{{ asset('images/presentation.jpg') }}">
+                    <div class="carousel-caption">
+                        <h3>Page 1 de présentation</h3>
+                    </div>
+                </div>
 
-    <div id="mySlide" class="slide slide text-center" data-ride="slide">
-        <!-- Indicators -->
-        <ol class="slide-indicators">
-            <li data-target="#mySlide" data-slide-to="0" class="active"></li>
-            <li data-target="#mySlide" data-slide-to="1"></li>
-            <li data-target="#mySlide" data-slide-to="2"></li>
-        </ol>
+                <div class="item">
+                    <div class="carousel-caption">
+                        <h3>Page 2 de présentation</h3>
+                    </div>
+                </div>
 
-        <!-- Wrapper for slides -->
-        <div class="slide-inner" role="listbox">
-            <div class="item active">
-                <h4>"This company is the best. I am so happy with the result!"<br><span style="font-style:normal;">Michael Roe, Vice President, Comment Box</span></h4>
+                <div class="item">
+                    <div class="carousel-caption">
+                        <h3>Page 2 de présentation</h3>
+                    </div>
+                </div>
             </div>
-            <div class="item">
-                <h4>"One word... WOW!!"<br><span style="font-style:normal;">John Doe, Salesman, Rep Inc</span></h4>
-            </div>
-            <div class="item">
-                <h4>"Could I... BE any more happy with this company?"<br><span style="font-style:normal;">Chandler Bing, Actor, FriendsAlot</span></h4>
-            </div>
+
+            <a class="left carousel-control" href="#mSlide" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#mSlide" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
         </div>
-
-        <!-- Left and right controls -->
-        <a class="left slide-control" href="#mySlide" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="right slide-control" href="#mySlide" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
     </div>
 
-    </div>
     <div class="container-fluid text-center bg-black">
         <h2 style="color:#E0893C">Nous contacter</h2>
         <hr/>

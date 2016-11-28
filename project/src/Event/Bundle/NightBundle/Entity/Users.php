@@ -289,4 +289,62 @@ class Users
         return $this->nom;
 
     }
+    /**
+     * @var string
+     */
+    private $genre;
+
+    /**
+     * @var string
+     */
+    private $couverture;
+
+
+    /**
+     * Set genre
+     *
+     * @param string $genre
+     *
+     * @return Users
+     */
+    public function setGenre($genre)
+    {
+        $this->genre = $genre;
+
+        return $this;
+    }
+
+    /**
+     * Get genre
+     *
+     * @return string
+     */
+    public function getGenre()
+    {
+        return $this->genre;
+    }
+
+    /**
+     * Set couverture
+     *
+     * @param string $couverture
+     *
+     * @return Users
+     */
+    public function setCouverture($couverture)
+    {
+        $this->couverture = $couverture;
+
+        return $this;
+    }
+
+    /**
+     * Get couverture
+     *
+     * @return string
+     */
+    public function getCouverture()
+    {
+        return $this->couverture;
+    }
 }

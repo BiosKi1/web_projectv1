@@ -38,6 +38,16 @@
         <option name="fixed"/>
       </options>
     </field>
+    <field name="genre" type="string" column="genre" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="couverture" type="string" column="couverture" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
     <many-to-one field="acces" target-entity="Autorisation" fetch="LAZY">
       <join-columns>
         <join-column name="acces" referenced-column-name="id"/>
