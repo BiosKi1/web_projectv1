@@ -1,6 +1,20 @@
 {% extends 'EventNightBundle::base.html.twig' %}
 
 {% block body %}
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="">Event</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navB">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{{ path('homepage') }}">Retour à l'accueil</a></li>
+                    <li><a href="{{ path('users_new') }}">Déconnexion</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <h1>Liste d'inscrit à l'évènement</h1>
 
     <div>
@@ -12,8 +26,6 @@
                 <th>Prenom</th>
                 <th>Adresse</th>
                 <th>Mail</th>
-                <th>Genre du manga</th>
-                <th>Couverture du manga</th>
                 <th>Id</th>
                 <th>Actions</th>
             </tr>
@@ -26,8 +38,6 @@
                     <td>{{ user.prenom }}</td>
                     <td>{{ user.adresse }},<br> {{ user.cp }} <br> {{ user.ville }}</td>
                     <td>{{ user.mail }}</td>
-                    <td>{{ user.genre }}</td>
-                    <td>{{ user.couverture }}</td>
                     <td>{{ user.id }}</td>
                     <td>
                         <ul>
