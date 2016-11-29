@@ -20,7 +20,10 @@ class UsersController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $users = $em->getRepository('EventNightBundle:Users')->findAll();
+        $users = $em->getRepository('EventNightBundle:Users')->findBy(
+            array(),
+            array('typeUser'=>'DESC')
+        );
 
         return $this->render('users/index.html.twig', array(
             'users' => $users,

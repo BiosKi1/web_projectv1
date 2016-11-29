@@ -1,7 +1,21 @@
-{% extends 'base.html.twig' %}
+{% extends 'EventNightBundle::base.html.twig' %}
 
 {% block body %}
-    <h1>User</h1>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="">Event</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navB">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{{ path('homepage') }}">Retour à l'accueil</a></li>
+                    <li><a href="{{ path('homepage') }}">Déconnexion</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1>Utilisateur inscrit</h1>
 
     <table>
         <tbody>
@@ -53,10 +67,10 @@
     </table>
 
     <ul>
-        <a href="{{ path('users_index') }}">Back to the list</a>
+        <a href="{{ path('users_index') }}">Retour à la liste</a>
     </ul>
     <ul>
-        <a href="{{ path('users_edit', { 'id': user.id }) }}">Edit</a>
+        <a href="{{ path('users_edit', { 'id': user.id }) }}">Modifier</a>
     </ul>
     <ul>
         {{ form_start(delete_form) }}

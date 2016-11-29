@@ -38,6 +38,7 @@ hr{
     filter: blur(1px);
 }
 body {
+    padding-top: 70px;
     font-family: 'Indie Flower', cursive;
     margin: 0;
     color: #3a3a3a

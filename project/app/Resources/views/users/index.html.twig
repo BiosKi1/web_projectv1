@@ -9,7 +9,7 @@
             <div class="collapse navbar-collapse" id="navB">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="{{ path('homepage') }}">Retour à l'accueil</a></li>
-                    <li><a href="{{ path('users_new') }}">Déconnexion</a></li>
+                    <li><a href="{{ path('homepage') }}">Déconnexion</a></li>
                 </ul>
             </div>
         </div>
@@ -32,9 +32,9 @@
 
             {% for user in users %}
                 <tr style="border-bottom: 1px solid #000">
-                    <td>{{ user.typeUser }}</a></td>
-                    <td><a href="{{ path('users_show', { 'id': user.id }) }}">{{ user.acces }}</td>
-                    <td>{{ user.nom }}</a></td>
+                    <td>{{ user.typeUser }}</td>
+                    <td><a href="{{ path('users_show', { 'id': user.id }) }}">{{ user.acces }}</a></td>
+                    <td>{{ user.nom }}</td>
                     <td>{{ user.prenom }}</td>
                     <td>{{ user.adresse }},<br> {{ user.cp }} <br> {{ user.ville }}</td>
                     <td>{{ user.mail }}</td>
