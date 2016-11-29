@@ -31,8 +31,6 @@ hr{
 }
 
 img{
-    width: 1580px;
-    height: 800px;
     filter: blur(1px);
 }
 body {
