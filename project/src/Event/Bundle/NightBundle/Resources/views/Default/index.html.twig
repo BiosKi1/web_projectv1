@@ -17,48 +17,46 @@
         </div>
     </nav>
 
-    <div class="container-fluid no-padding">
-                <img class="fullpage" src="{{ asset('images/presentation.jpg') }}" >
+    <div id="mSlide" class="carousel slide carousel-fade" data-ride="carousel" style="width: 100%;">
+
+        <div class="overlay"></div>
+
+        <ol class="carousel-indicators">
+            <li data-target="#mSlide" data-slide-to="0" class="active"></li>
+            <li data-target="#mSlide" data-slide-to="1"></li>
+        </ol>
+
+        <div class="carousel-inner">
+            <div class="item active">
+                <img class="img-responsive" src="{{ asset('images/presentation.jpg') }}">
+                <div class="hero">
+                    <hgroup>
+                        <h1>Soirée Manga</h1>
+                        <h3>Inscription dès maintenant</h3>
+                    </hgroup>
+                    <button class="btn btn-hero btn-lg" role="button">Inscription</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img class="img-responsive" src="{{ asset('images/couv1.jpg') }}">
+                <div class="carousel-caption">
+                    <h3>Page 2 de présentation</h3>
+                </div>
+            </div>
+        </div>
+
+        <a class="left carousel-control left" href="#mSlide" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control right" href="#mSlide" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
     </div>
 
     <div class="container-fluid text-center bg-grey">
         <h2 style="color:#E0893C">Présentation</h2>
-        <div id="mSlide" class="carousel slide" data-ride="carousel">
-            <!-- Bulles -->
-            <ol class="carousel-indicators">
-                <li data-target="#mSlide" data-slide-to="0" class="active"></li>
-                <li data-target="#mSlide" data-slide-to="1"></li>
-                <li data-target="#mSlide" data-slide-to="2"></li>
-            </ol>
 
-            <div class="carousel-inner">
-                <div class="item active">
-                    <img src="{{ asset('images/presentation.jpg') }}">
-                    <div class="carousel-caption">
-                        <h3>Page 1 de présentation</h3>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="carousel-caption">
-                        <h3>Page 2 de présentation</h3>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="carousel-caption">
-                        <h3>Page 2 de présentation</h3>
-                    </div>
-                </div>
-            </div>
-
-            <a class="left carousel-control" href="#mSlide" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-            </a>
-            <a class="right carousel-control" href="#mSlide" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-            </a>
-        </div>
     </div>
 
     <div class="container-fluid text-center bg-black">
