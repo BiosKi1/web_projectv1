@@ -1,7 +1,7 @@
 <?php
 
 namespace Event\Bundle\NightBundle\Entity;
-
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 /**
  * Users
  */
@@ -336,17 +336,15 @@ class Users
      *
      * @return Users
      */
-    public function setCouverture($couverture)
+    public function setCouverture(UploadedFile $file )
     {
-        $this->couverture = $couverture;
-
-        return $this;
+        $this->couverture = $file;
     }
 
     /**
-     * Get couverture
+     * Get file.
      *
-     * @return string
+     * @return UploadedFile
      */
     public function getCouverture()
     {
@@ -365,6 +363,15 @@ class Users
         $this->mdp = $mdp;
 
         return $this;
+    }
+
+    public function upload(UploadedFile $file,$id)
+    {
+        $fileName = $id;
+
+        $file->move( __DIR__.'/../../../../../web/images/avatar', $fileName);
+
+        return $fileName;
     }
 
     /**
