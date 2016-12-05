@@ -1,7 +1,7 @@
 <?php
 
 namespace Event\Bundle\NightBundle\Controller;
-
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Event\Bundle\NightBundle\Entity\Users;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -36,14 +36,20 @@ class UsersController extends Controller
      */
     public function newAction(Request $request)
     {
-        $user = new User();
-        $form = $this->createForm('Event\Bundle\NightBundle\Form\UsersType', $user);
+        $user = new Users();
+        $form = $this->createForm('Event\Bundle\NightBundle\Form\UsersSign', $user);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($user);
             $em->flush();
+            $someNewFilename = $user->getId();
+            $file = $user->getCouverture();
+
+           $user->upload($file,$someNewFilename.'.'.$file->guessExtension());
+
+
 
             return $this->redirectToRoute('users_show', array('id' => $user->getId()));
         }
