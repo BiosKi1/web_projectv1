@@ -13,3 +13,8 @@ event_night_back:
 event_night_new:
   path: /new
   defaults: { _controller: EventNightBundle:Users:new}
+
+event_night_login:
+  path: /login
+  defaults: { _controller: EventNightBundle:Security:login}
+  methods: [GET, POST]
