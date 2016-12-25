@@ -22,7 +22,7 @@ class UsersController extends Controller
 
         $users = $em->getRepository('EventNightBundle:Users')->findBy(
             array(),
-            array('typeUser'=>'DESC')
+            array('acces'=>'ASC')
         );
 
         return $this->render('users/index.html.twig', array(

@@ -2,21 +2,8 @@
 {% block title %} Accueil {% endblock %}
 
 {% block body%}
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="">Event</a>
-            </div>
-            <div class="collapse navbar-collapse" id="navB">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="{{ path('homepage') }}">Accueil</a></li>
-                    <li><a href="{{ path('users_new') }}">Inscription</a></li>
-                    <li><a href="{{ path('users_index') }}">Connexion</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
+    {% embed "@EventNight/navbarDefault.html.twig" %}
+    {% endembed %}
     <div id="mSlide" class="carousel slide carousel-fade" data-ride="carousel" style="width: 100%;">
 
         <div class="overlay"></div>

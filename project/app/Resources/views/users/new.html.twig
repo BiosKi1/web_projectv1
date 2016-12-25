@@ -1,6 +1,8 @@
 {% extends 'EventNightBundle::base.html.twig' %}
 
 {% block body %}
+    {% embed "@EventNight/navbarDefault.html.twig" %}
+    {% endembed %}
     <h1>User creation</h1>
 
     {{ form_start(form) }}

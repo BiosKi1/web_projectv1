@@ -28,7 +28,20 @@
     <favorites_list name="project" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="UsersController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Event/Bundle/NightBundle/Controller/UsersController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+              <folding>
+                <element signature="e#514#538#1#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -48,19 +61,23 @@
         <option value="$PROJECT_DIR$/src/Event/Bundle/NightBundle/Entity/Users.php" />
         <option value="$PROJECT_DIR$/src/Event/Bundle/NightBundle/Form/UsersType.php" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
-        <option value="$PROJECT_DIR$/app/Resources/views/users/edit.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/users/show.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/users/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Event/Bundle/NightBundle/Controller/UsersController.php" />
         <option value="$PROJECT_DIR$/src/Event/Bundle/NightBundle/Resources/views/base.html.twig" />
-        <option value="$PROJECT_DIR$/src/Event/Bundle/NightBundle/Resources/views/Default/index.html.twig" />
         <option value="$PROJECT_DIR$/web/css/styles.css" />
-        <option value="$PROJECT_DIR$/app/Resources/views/users/new.html.twig" />
-        <option value="$PROJECT_DIR$/app/config/security.yml" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/Event/Bundle/NightBundle/Controller/SecurityController.php" />
         <option value="$PROJECT_DIR$/src/Event/Bundle/NightBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/app/config/security.yml" />
         <option value="$PROJECT_DIR$/app/Resources/views/security/login.html.twig" />
+        <option value="$PROJECT_DIR$/src/Event/Bundle/NightBundle/Controller/SecurityController.php" />
+        <option value="$PROJECT_DIR$/src/Event/Bundle/NightBundle/Resources/views/header.html.twig" />
+        <option value="$PROJECT_DIR$/src/Event/Bundle/NightBundle/Resources/views/navbar.html.twig" />
+        <option value="$PROJECT_DIR$/src/Event/Bundle/NightBundle/Resources/views/navbarDefault.html.twig" />
+        <option value="$PROJECT_DIR$/src/Event/Bundle/NightBundle/Resources/views/Default/index.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/users/new.html.twig" />
+        <option value="$PROJECT_DIR$/src/Event/Bundle/NightBundle/Resources/views/navbarEnr.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/users/edit.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/users/index.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/users/show.html.twig" />
+        <option value="$PROJECT_DIR$/src/Event/Bundle/NightBundle/Controller/UsersController.php" />
       </list>
     </option>
   </component>
@@ -72,9 +89,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.6" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="960" />
-    <option name="width" value="960" />
-    <option name="height" value="1040" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -102,6 +120,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -502,7 +521,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -611,20 +629,24 @@
       <workItem from="1480862224492" duration="5750000" />
       <workItem from="1481663685071" duration="2519000" />
       <workItem from="1481666214563" duration="507000" />
+      <workItem from="1481749214741" duration="662000" />
+      <workItem from="1482266511357" duration="3054000" />
+      <workItem from="1482675996971" duration="3011000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56578000" />
+    <option name="totallyTimeSpent" value="63305000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="960" y="0" width="960" height="1040" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37666667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18923241" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286908" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -636,7 +658,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -654,47 +675,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="9" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Event/Bundle/NightBundle/Resources/views/Default/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Event/Bundle/NightBundle/EventNightBundle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Event/Bundle/NightBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/AppBundle.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -828,24 +813,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/users/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="44" selection-start-line="0" selection-start-column="44" selection-end-line="0" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -867,21 +838,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="235" column="42" selection-start-line="235" selection-start-column="42" selection-end-line="235" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/users/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -909,19 +865,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Event/Bundle/NightBundle/Resources/views/Default/admin.html.twig" />
-    <entry file="file://$PROJECT_DIR$/src/Event/Bundle/NightBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Event/Bundle/NightBundle/Resources/config/routing/users.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -929,49 +876,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Event/Bundle/NightBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Event/Bundle/NightBundle/Controller/SigninController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Event/Bundle/NightBundle/Controller/SecurityController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="19" column="35" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="35" />
-          <folding>
-            <element signature="e#6#88#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Event/Bundle/NightBundle/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Event/Bundle/NightBundle/Resources/views/Default/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -979,6 +883,267 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="534">
           <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Event/Bundle/NightBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Event/Bundle/NightBundle/Controller/SecurityController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding>
+            <element signature="e#703#729#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/security/login.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+          <folding>
+            <element signature="e#187#210#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Event/Bundle/NightBundle/Resources/views/header.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/var/cache/dev/twig/fc/fcf3a742e50c47131c76f2b84a1662bd2979174c76f9000a9dc8c167fd054e43.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="263" column="45" selection-start-line="263" selection-start-column="45" selection-end-line="263" selection-end-column="45" />
+          <folding>
+            <marker date="1482678266700" expanded="false" signature="3011:3023" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="3025:3404" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="3108:3271" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="3311:3404" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="3351:3404" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="3659:3942" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="3688:3824" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="3995:4048" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="4308:4383" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="4504:4586" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="4674:4757" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="4825:4891" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="4847:4860" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="4949:6566" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="4971:4984" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="5060:6555" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="5098:5343" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="5128:5144" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="5202:5208" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="5251:5267" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="5269:5324" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="5380:5593" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="5410:5426" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="5480:5486" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="5531:5547" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="5630:5846" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="5660:5676" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="5734:5740" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="5780:5796" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="5883:6540" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="5913:5929" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="6063:6143" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="6252:6331" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="6440:6521" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="7782:7794" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="7796:9185" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="7879:8042" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="8082:8834" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="8122:8555" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="8253:8536" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="8282:8418" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="8589:8819" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="8725:8800" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="8921:9003" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="9091:9174" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="9242:9308" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="9264:9277" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="9366:10983" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="9388:9401" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="9477:10972" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="9515:9760" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="9545:9561" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="9619:9625" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="9668:9684" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="9686:9741" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="9797:10010" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="9827:9843" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="9897:9903" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="9948:9964" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="10047:10263" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="10077:10093" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="10151:10157" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="10197:10213" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="10300:10957" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="10330:10346" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="10480:10560" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="10669:10748" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="10857:10938" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="13597:13609" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="13611:15000" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="13694:13857" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="13897:14649" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="13937:14370" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="14068:14351" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="14097:14233" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="14404:14634" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="14540:14615" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="14736:14818" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="14906:14989" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="15057:15123" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="15079:15092" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="15181:16798" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="15203:15216" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="15292:16787" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="15330:15575" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="15360:15376" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="15434:15440" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="15483:15499" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="15501:15556" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="15612:15825" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="15642:15658" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="15712:15718" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="15763:15779" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="15862:16078" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="15892:15908" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="15966:15972" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="16012:16028" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="16115:16772" ph="..." />
+            <marker date="1482678266700" expanded="false" signature="16145:16161" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="16295:16375" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="16484:16563" ph="..." />
+            <marker date="1482678266700" expanded="true" signature="16672:16753" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Event/Bundle/NightBundle/Resources/views/navbar.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Event/Bundle/NightBundle/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Event/Bundle/NightBundle/Resources/views/navbarEnr.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Event/Bundle/NightBundle/Resources/views/navbarDefault.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <folding>
+            <element signature="e#334#342#0#Twig" expanded="false" />
+            <element signature="e#404#413#0#Twig" expanded="false" />
+            <element signature="e#479#490#0#Twig" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/users/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/users/new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/users/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/users/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="4" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Event/Bundle/NightBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-567">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="5" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Event/Bundle/NightBundle/Controller/SigninController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-278">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Event/Bundle/NightBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -991,48 +1156,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/users/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="27" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/users/new.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="8" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/security/login.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#187#192#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Event/Bundle/NightBundle/Controller/UsersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1040">
-          <caret line="121" column="6" selection-start-line="121" selection-start-column="6" selection-end-line="121" selection-end-column="6" />
+        <state relative-caret-position="255">
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
           <folding>
-            <element signature="e#54#109#0#PHP" expanded="true" />
             <element signature="e#514#538#1#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
