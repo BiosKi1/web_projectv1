@@ -1,21 +1,12 @@
 <?php
 
 namespace Event\Bundle\NightBundle\Entity;
-
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 /**
  * Users
  */
 class Users
 {
-    /**
-     * @var string
-     */
-    private $pseudo;
-
-    /**
-     * @var string
-     */
-    private $mdp;
 
     /**
      * @var string
@@ -48,16 +39,6 @@ class Users
     private $mail;
 
     /**
-     * @var string
-     */
-    private $genre;
-
-    /**
-     * @var string
-     */
-    private $couverture;
-
-    /**
      * @var integer
      */
     private $id;
@@ -65,61 +46,8 @@ class Users
     /**
      * @var \Event\Bundle\NightBundle\Entity\TypeUsers
      */
-    private $typeUser;
+    private $idUser;
 
-    /**
-     * @var \Event\Bundle\NightBundle\Entity\Autorisation
-     */
-    private $acces;
-
-
-    /**
-     * Set pseudo
-     *
-     * @param string $pseudo
-     *
-     * @return Users
-     */
-    public function setPseudo($pseudo)
-    {
-        $this->pseudo = $pseudo;
-
-        return $this;
-    }
-
-    /**
-     * Get pseudo
-     *
-     * @return string
-     */
-    public function getPseudo()
-    {
-        return $this->pseudo;
-    }
-
-    /**
-     * Set mdp
-     *
-     * @param string $mdp
-     *
-     * @return Users
-     */
-    public function setMdp($mdp)
-    {
-        $this->mdp = $mdp;
-
-        return $this;
-    }
-
-    /**
-     * Get mdp
-     *
-     * @return string
-     */
-    public function getMdp()
-    {
-        return $this->mdp;
-    }
 
     /**
      * Set nom
@@ -266,6 +194,114 @@ class Users
     }
 
     /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set idUser
+     *
+     * @param \Event\Bundle\NightBundle\Entity\TypeUsers $idUser
+     *
+     * @return Users
+     */
+    public function setIdUser(\Event\Bundle\NightBundle\Entity\TypeUsers $idUser = null)
+    {
+        $this->idUser = $idUser;
+
+        return $this;
+    }
+
+    /**
+     * Get idUser
+     *
+     * @return \Event\Bundle\NightBundle\Entity\TypeUsers
+     */
+    public function getIdUser()
+    {
+        return $this->idUser;
+    }
+    /**
+     * @var \Event\Bundle\NightBundle\Entity\Autorisation
+     */
+    private $acces;
+
+    /**
+     * @var \Event\Bundle\NightBundle\Entity\TypeUsers
+     */
+    private $typeUser;
+
+
+    /**
+     * Set acces
+     *
+     * @param \Event\Bundle\NightBundle\Entity\Autorisation $acces
+     *
+     * @return Users
+     */
+    public function setAcces(\Event\Bundle\NightBundle\Entity\Autorisation $acces = null)
+    {
+        $this->acces = $acces;
+
+        return $this;
+    }
+
+    /**
+     * Get acces
+     *
+     * @return \Event\Bundle\NightBundle\Entity\Autorisation
+     */
+    public function getAcces()
+    {
+        return $this->acces;
+    }
+
+    /**
+     * Set typeUser
+     *
+     * @param \Event\Bundle\NightBundle\Entity\TypeUsers $typeUser
+     *
+     * @return Users
+     */
+    public function setTypeUser(\Event\Bundle\NightBundle\Entity\TypeUsers $typeUser = null)
+    {
+        $this->typeUser = $typeUser;
+
+        return $this;
+    }
+
+    /**
+     * Get typeUser
+     *
+     * @return \Event\Bundle\NightBundle\Entity\TypeUsers
+     */
+    public function getTypeUser()
+    {
+        return $this->typeUser;
+    }
+
+    public function __toString(){
+
+        return $this->nom;
+
+    }
+    /**
+     * @var string
+     */
+    private $genre;
+
+    /**
+     * @var string
+     */
+    private $couverture;
+
+
+    /**
      * Set genre
      *
      * @param string $genre
@@ -296,79 +332,38 @@ class Users
      *
      * @return Users
      */
-    public function setCouverture($couverture)
+    public function setCouverture(UploadedFile $file )
     {
-        $this->couverture = $couverture;
-
-        return $this;
+        $this->couverture = $file;
     }
 
     /**
-     * Get couverture
+     * Get file.
      *
-     * @return string
+     * @return UploadedFile
      */
     public function getCouverture()
     {
         return $this->couverture;
     }
 
-    /**
-     * Get id
-     *
-     * @return integer
-     */
-    public function getId()
+
+
+    public function upload(UploadedFile $file,$id)
     {
-        return $this->id;
+        $fileName = $id;
+
+        $file->move( __DIR__.'/../../../../../web/images/avatar', $fileName);
+
+        return $fileName;
     }
 
-    /**
-     * Set typeUser
-     *
-     * @param \Event\Bundle\NightBundle\Entity\TypeUsers $typeUser
-     *
-     * @return Users
-     */
-    public function setTypeUser(\Event\Bundle\NightBundle\Entity\TypeUsers $typeUser = null)
+
+
+    public function serialize()
     {
-        $this->typeUser = $typeUser;
-
-        return $this;
-    }
-
-    /**
-     * Get typeUser
-     *
-     * @return \Event\Bundle\NightBundle\Entity\TypeUsers
-     */
-    public function getTypeUser()
-    {
-        return $this->typeUser;
-    }
-
-    /**
-     * Set acces
-     *
-     * @param \Event\Bundle\NightBundle\Entity\Autorisation $acces
-     *
-     * @return Users
-     */
-    public function setAcces(\Event\Bundle\NightBundle\Entity\Autorisation $acces = null)
-    {
-        $this->acces = $acces;
-
-        return $this;
-    }
-
-    /**
-     * Get acces
-     *
-     * @return \Event\Bundle\NightBundle\Entity\Autorisation
-     */
-    public function getAcces()
-    {
-        return $this->acces;
+        return serialize(array(
+            $this->id,
+        ));
     }
 }
-

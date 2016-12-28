@@ -5,9 +5,6 @@
       <index name="fk_typeUsers" columns="type_user"/>
       <index name="fk_acces" columns="acces"/>
     </indexes>
-    <unique-constraints>
-      <unique-constraint name="pseudo" columns="pseudo"/>
-    </unique-constraints>
     <id name="id" type="integer" column="id">
       <generator strategy="IDENTITY"/>
     </id>
@@ -61,14 +58,14 @@
         <option name="fixed"/>
       </options>
     </field>
-    <many-to-one field="typeUser" target-entity="TypeUsers" fetch="LAZY">
-      <join-columns>
-        <join-column name="type_user" referenced-column-name="id"/>
-      </join-columns>
-    </many-to-one>
     <many-to-one field="acces" target-entity="Autorisation" fetch="LAZY">
       <join-columns>
         <join-column name="acces" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="typeUser" target-entity="TypeUsers" fetch="LAZY">
+      <join-columns>
+        <join-column name="type_user" referenced-column-name="id"/>
       </join-columns>
     </many-to-one>
   </entity>

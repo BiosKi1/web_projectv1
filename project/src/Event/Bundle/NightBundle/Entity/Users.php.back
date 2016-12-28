@@ -7,10 +7,6 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
  */
 class Users
 {
-    /**
-     * @var string
-     */
-    private $mdp;
 
     /**
      * @var string
@@ -351,6 +347,31 @@ class Users
         return $this->couverture;
     }
 
+
+
+    public function upload(UploadedFile $file,$id)
+    {
+        $fileName = $id;
+
+        $file->move( __DIR__.'/../../../../../web/images/avatar', $fileName);
+
+        return $fileName;
+    }
+
+
+
+    public function serialize()
+    {
+        return serialize(array(
+            $this->id,
+        ));
+    }
+    /**
+     * @var string
+     */
+    private $mdp;
+
+
     /**
      * Set mdp
      *
@@ -365,15 +386,6 @@ class Users
         return $this;
     }
 
-    public function upload(UploadedFile $file,$id)
-    {
-        $fileName = $id;
-
-        $file->move( __DIR__.'/../../../../../web/images/avatar', $fileName);
-
-        return $fileName;
-    }
-
     /**
      * Get mdp
      *
@@ -382,43 +394,5 @@ class Users
     public function getMdp()
     {
         return $this->mdp;
-    }
-
-    /**
-     * @var string
-     */
-    private $pseudo;
-
-    /**
-     * Set pseudo
-     *
-     * @param string $pseudo
-     *
-     * @return Users
-     */
-    public function setPseudo($pseudo)
-    {
-        $this->pseudo = $pseudo;
-
-        return $this;
-    }
-
-    /**
-     * Get pseudo
-     *
-     * @return string
-     */
-    public function getPseudo()
-    {
-        return $this->pseudo;
-    }
-
-    public function serialize()
-    {
-        return serialize(array(
-            $this->id,
-            $this->prenom,
-            $this->mdp,
-        ));
     }
 }
