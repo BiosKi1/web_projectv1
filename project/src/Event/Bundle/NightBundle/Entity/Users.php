@@ -383,4 +383,42 @@ class Users
     {
         return $this->mdp;
     }
+
+    /**
+     * @var string
+     */
+    private $pseudo;
+
+    /**
+     * Set pseudo
+     *
+     * @param string $pseudo
+     *
+     * @return Users
+     */
+    public function setPseudo($pseudo)
+    {
+        $this->pseudo = $pseudo;
+
+        return $this;
+    }
+
+    /**
+     * Get pseudo
+     *
+     * @return string
+     */
+    public function getPseudo()
+    {
+        return $this->pseudo;
+    }
+
+    public function serialize()
+    {
+        return serialize(array(
+            $this->id,
+            $this->prenom,
+            $this->mdp,
+        ));
+    }
 }

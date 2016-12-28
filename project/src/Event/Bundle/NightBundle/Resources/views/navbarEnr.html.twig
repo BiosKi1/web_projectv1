@@ -5,6 +5,11 @@
         </div>
         <div class="collapse navbar-collapse" id="navB">
             <ul class="nav navbar-nav navbar-right">
+                {% if is_granted('ROLE_ADMIN') %}
+                    <li><a href="{{ path('users_new') }}">testad</a></li>
+                {% else %}
+                    <li><a href="{{ path('event_night_logout') }}">testi</a></li>
+                {% endif %}
                 <li><a href="{{ path('homepage') }}">Retour à l'accueil</a></li>
                 <li><a href="{{ path('homepage') }}">Déconnexion</a></li>
             </ul>

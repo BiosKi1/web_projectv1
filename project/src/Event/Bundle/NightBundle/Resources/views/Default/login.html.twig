@@ -1,0 +1,20 @@
+{% extends '@EventNight/base.html.twig' %}
+
+{% block body %}
+    {% embed "@EventNight/navbarDefault.html.twig" %}
+    {% endembed %}
+    {% if error %}
+        <div>{{ error.message }}</div>
+    {% endif %}
+
+    <form action="{{ path('event_night_login') }}" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="_username" />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="_password" />
+
+        <button type="submit">login</button>
+    </form>
+
+{% endblock %}

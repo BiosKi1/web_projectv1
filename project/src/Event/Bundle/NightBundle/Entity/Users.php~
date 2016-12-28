@@ -1,12 +1,17 @@
 <?php
 
 namespace Event\Bundle\NightBundle\Entity;
-
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 /**
  * Users
  */
 class Users
 {
+    /**
+     * @var string
+     */
+    private $mdp;
+
     /**
      * @var string
      */
@@ -331,20 +336,89 @@ class Users
      *
      * @return Users
      */
-    public function setCouverture($couverture)
+    public function setCouverture(UploadedFile $file )
     {
-        $this->couverture = $couverture;
+        $this->couverture = $file;
+    }
+
+    /**
+     * Get file.
+     *
+     * @return UploadedFile
+     */
+    public function getCouverture()
+    {
+        return $this->couverture;
+    }
+
+    /**
+     * Set mdp
+     *
+     * @param string $mdp
+     *
+     * @return Users
+     */
+    public function setMdp($mdp)
+    {
+        $this->mdp = $mdp;
+
+        return $this;
+    }
+
+    public function upload(UploadedFile $file,$id)
+    {
+        $fileName = $id;
+
+        $file->move( __DIR__.'/../../../../../web/images/avatar', $fileName);
+
+        return $fileName;
+    }
+
+    /**
+     * Get mdp
+     *
+     * @return string
+     */
+    public function getMdp()
+    {
+        return $this->mdp;
+    }
+
+    /**
+     * @var string
+     */
+    private $pseudo;
+
+    /**
+     * Set pseudo
+     *
+     * @param string $pseudo
+     *
+     * @return Users
+     */
+    public function setPseudo($pseudo)
+    {
+        $this->pseudo = $pseudo;
 
         return $this;
     }
 
     /**
-     * Get couverture
+     * Get pseudo
      *
      * @return string
      */
-    public function getCouverture()
+    public function getPseudo()
     {
-        return $this->couverture;
+        return $this->pseudo;
+    }
+
+    public function serialize()
+    {
+        return serialize(array(
+            $this->id,
+            $this->prenom,
+            $this->mdp,
+        ));
     }
 }

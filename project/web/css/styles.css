@@ -49,6 +49,9 @@ table, th{
     text-align: center;
 }
 
+/*
+Bouton font awesome
+*/
 .fa-eye{
     color: lightskyblue;
     font-size: 30px;
@@ -155,6 +158,16 @@ Champs carousel
 
 .carousel-fade .carousel-control {
     z-index: 2;
+}
+
+/*
+Image du carousel
+*/
+
+.imgCarousel img {
+    width: auto;
+    height: 225px;
+    max-height: 225px;
 }
 
 /*

@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Lun 28 Novembre 2016 à 10:44
--- Version du serveur :  10.1.9-MariaDB
--- Version de PHP :  5.6.15
+-- Généré le :  Mer 28 Décembre 2016 à 14:39
+-- Version du serveur :  10.1.19-MariaDB
+-- Version de PHP :  7.0.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `webproject`
+-- Base de données :  `web_project`
 --
 
 -- --------------------------------------------------------
@@ -70,6 +70,8 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `type_user` int(11) DEFAULT NULL,
   `acces` int(11) DEFAULT NULL,
+  `pseudo` varchar(255) NOT NULL,
+  `mdp` varchar(255) NOT NULL,
   `nom` varchar(255) NOT NULL,
   `prenom` varchar(255) NOT NULL,
   `adresse` varchar(255) NOT NULL,
@@ -84,12 +86,13 @@ CREATE TABLE `users` (
 -- Contenu de la table `users`
 --
 
-INSERT INTO `users` (`id`, `type_user`, `acces`, `nom`, `prenom`, `adresse`, `ville`, `cp`, `mail`, `genre`, `couverture`) VALUES
-(1, 1, 2, 'slt', 'slt', '12 du slt', 'slt', 54707, 'slt@slt.fr', 'genre1', 'couver1'),
-(2, 2, 1, 'cc', 'cc', '12 du cc', 'cc', 85135, 'cc@cc.com', 'genre1', 'couv'),
-(3, 3, 1, 'pd1', 'pd2', '33 du pd3 ', 'pd4', 12345, 'pd5@pd6.com', 'genre', 'c'),
-(4, 1, 3, 'test', 'test1', '10 rue random', 'paris', 75000, 'erar@gagea.com', 'ge', 'couverture'),
-(6, 2, 2, 'tes23', 'test', 'tes', 'test', 2222, 'tes', '', '');
+INSERT INTO `users` (`id`, `type_user`, `acces`, `pseudo`, `mdp`, `nom`, `prenom`, `adresse`, `ville`, `cp`, `mail`, `genre`, `couverture`) VALUES
+(7, NULL, NULL, 'admin', 'aze', 'zaeazeaze', 'azeaze', 'azeazrn', 'efoinafnae', 88888, 'afeaef@xn--gaegez-hc1c', 'Shônen', 'D:\\xampp\\tmp\\php4643.tmp'),
+(8, NULL, NULL, 'test1', 'aze', 'aze', 'aze', 'azeaze', 'azeazeza', 8888, 'aaa@gaa.f', 'Shônen', 'D:\\xampp\\tmp\\php8026.tmp'),
+(9, NULL, NULL, 'test4', 'nnoi', 'aze', 'tets', 'fnir', 'ooo', 8888, 'fneri@gm.fr', 'Shônen', 'D:\\xampp\\tmp\\phpE56A.tmp'),
+(10, NULL, NULL, 'test2', 'aze', 'aze', 'zae', 'aze', '888', 8888, 'zaeoaz@g.fr', 'Shônen', 'D:\\xampp\\tmp\\php6A8E.tmp'),
+(11, NULL, NULL, 'test3', 'aze', 'aze', 'aze', 'aze', 'aze', 888, 'azaa@gg.fr', 'Shônen', 'D:\\xampp\\tmp\\php8127.tmp'),
+(12, NULL, NULL, 'test5', 'aze', 'aze', 'aze', 'ettest', 'test', 8888, 'te@gej.fr', 'Shônen', 'D:\\xampp\\tmp\\php3868.tmp');
 
 --
 -- Index pour les tables exportées
@@ -112,6 +115,7 @@ ALTER TABLE `type_users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `pseudo` (`pseudo`),
   ADD KEY `fk_typeUsers` (`type_user`),
   ADD KEY `fk_acces` (`acces`);
 
@@ -133,7 +137,7 @@ ALTER TABLE `type_users`
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- Contraintes pour les tables exportées
 --
