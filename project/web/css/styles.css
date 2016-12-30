@@ -160,14 +160,28 @@ Champs carousel
     z-index: 2;
 }
 
+.carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #f4511e;
+}
+.carousel-indicators li {
+    border-color: #f4511e;
+}
+.carousel-indicators li.active {
+    background-color: #f4511e;
+}
+
 /*
 Image du carousel
 */
 
-.imgCarousel img {
+img {
     width: auto;
-    height: 225px;
-    max-height: 225px;
+    height: 300px;
+    max-height: 300px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0 auto;
 }
 
 /*
@@ -197,7 +211,7 @@ now override the 3.3 new styles for modern browsers & apply opacity
 }
 
 /*
-Carousel Responsive
+Ombre
 */
 .overlay {
     position: absolute;
@@ -206,46 +220,4 @@ Carousel Responsive
     z-index: 2;
     background-color: #080d15;
     opacity: .7;
-}
-
-/*
-Hero
-*/
-.hero {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 3;
-    color: #fff;
-    text-align: center;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 0 rgba(0,0,0,.75);
-    -webkit-transform: translate3d(-50%,-50%,0);
-    -moz-transform: translate3d(-50%,-50%,0);
-    -ms-transform: translate3d(-50%,-50%,0);
-    -o-transform: translate3d(-50%,-50%,0);
-    transform: translate3d(-50%,-50%,0);
-}
-.hero h1 {
-    font-size: 6em;
-    font-weight: bold;
-    margin: 0;
-    padding: 0;
-}
-
-.fade-carousel .carousel-inner .item .hero {
-    opacity: 0;
-    -webkit-transition: 2s all ease-in-out .1s;
-    -moz-transition: 2s all ease-in-out .1s;
-    -ms-transition: 2s all ease-in-out .1s;
-    -o-transition: 2s all ease-in-out .1s;
-    transition: 2s all ease-in-out .1s;
-}
-.fade-carousel .carousel-inner .item.active .hero {
-    opacity: 1;
-    -webkit-transition: 2s all ease-in-out .1s;
-    -moz-transition: 2s all ease-in-out .1s;
-    -ms-transition: 2s all ease-in-out .1s;
-    -o-transition: 2s all ease-in-out .1s;
-    transition: 2s all ease-in-out .1s;
 }

@@ -4,48 +4,56 @@
 {% block body%}
     {% embed "@EventNight/navbarDefault.html.twig" %}
     {% endembed %}
-    <div id="mSlide" class="carousel slide carousel-fade" data-ride="carousel" style="width: 100%;">
-
-        <div class="overlay"></div>
-
-        <ol class="carousel-indicators">
-            <li data-target="#mSlide" data-slide-to="0" class="active"></li>
-            <li data-target="#mSlide" data-slide-to="1"></li>
-        </ol>
-
-        <div class="carousel-inner">
-            <div class="item active">
-                <img class="img-responsive" src="{{ asset('images/presentation.jpg') }}">
-                <div class="hero">
-                    <hgroup>
-                        <h1>Soirée Manga</h1>
-                        <h3>Inscription dès maintenant</h3>
-                    </hgroup>
-                    <button class="btn btn-hero btn-lg" role="button">Inscription</button>
-                </div>
-            </div>
-
-            <div class="item">
-                <img class="img-responsive" src="{{ asset('images/couv1.jpg') }}">
-                <div class="carousel-caption">
-                    <h3>Page 2 de présentation</h3>
-                </div>
-            </div>
-        </div>
-
-        <a class="left carousel-control left" href="#mSlide" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-        </a>
-        <a class="right carousel-control right" href="#mSlide" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-        </a>
-    </div>
 
     <div class="container-fluid text-center bg-grey">
         <h2 style="color:#E0893C">Présentation</h2>
-
+        <p>Retrouvez tous vos mangakas préférés à la soirée manga du 01 février</p>
     </div>
 
+    <div class="container-fluid text-center bg-grey">
+        <h2>Rencontrez votre Mangaka favori</h2>
+        <p>Séance de dédicace et performance en live !! </p>
+    </div>
+
+    <div class="container-fluid text-center bg-grey">
+        <h2>Venez assister à la remise des prix du concours de dessin</h2>
+        <p>Sélection sur plus de 100 déssins par un groupe de jury dont Masahi Kishimoto</p>
+    </div>
+
+    <div class="container-fluid text-center bg-grey">
+        <h2 style="color:#E0893C">Déssins sélectionnés par les jury</h2>
+        <div id="mSlide" class="carousel slide carousel-fade" data-ride="carousel" >
+
+            <ol class="carousel-indicators">
+                <li data-target="#mSlide" data-slide-to="0" class="active"></li>
+                <li data-target="#mSlide" data-slide-to="1"></li>
+                <li data-target="#mSlide" data-slide-to="2"></li>
+                <li data-target="#mSlide" data-slide-to="3"></li>
+            </ol>
+
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img class="img-responsive" src="{{ asset('images/img_fan/07_by_ningar-d8bky3e.jpg') }}">
+                </div>
+                <div class="item">
+                    <img class="img-responsive" src="{{ asset('images/img_fan/Kaneki.Ken.full.1810432.jpg') }}">
+                </div>
+                <div class="item">
+                    <img class="img-responsive" src="{{ asset('images/img_fan/07_by_ningar-d8bky3e.jpg') }}">
+                </div>
+                <div class="item">
+                    <img class="img-responsive" src="{{ asset('images/img_fan/untitled_by_jesusagudo-d6vmyw7.jpg') }}">
+                </div>
+            </div>
+
+            <a class="left carousel-control left" href="#mSlide" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control right" href="#mSlide" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+    </div>
     <div class="container-fluid text-center bg-black">
         <h2 style="color:#E0893C">Nous contacter</h2>
         <hr/>

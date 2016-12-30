@@ -370,5 +370,39 @@ class Users
     {
         return $this->acces;
     }
+
+    public function upload(UploadedFile $file,$id)
+    {
+        $fileName = $id;
+
+        $file->move( __DIR__.'/../../../../../web/images/avatar', $fileName);
+
+        return $fileName;
+    }
+
+    public function getRoles()
+    {
+        return array('ROLE_USER');
+    }
+
+    public function serialize()
+    {
+        return serialize(array(
+            $this->id,
+            $this->pseudo,
+            $this->mdp,
+            // see section on salt below
+            // $this->salt,
+        ));
+    }
+
+    public function unserialize($serialized)
+    {
+        list (
+            $this->id,
+            $this->pseudo,
+            $this->mdp,
+            ) = unserialize($serialized);
+    }
 }
 
