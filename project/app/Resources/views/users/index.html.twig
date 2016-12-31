@@ -1,7 +1,7 @@
 {% extends 'EventNightBundle::base.html.twig' %}
 
 {% block body %}
-    {% embed "@EventNight/navbarEnr.html.twig" %}
+    {% embed "@EventNight/navbarDefault.html.twig" %}
     {% endembed %}
 
     <h1>Liste d'inscrit à l'évènement</h1>
@@ -11,6 +11,7 @@
             <tr style="border-bottom: 1px solid #000">
                 <th>Type d'utilisateur</th>
                 <th>Etat de l'inscription</th>
+                <th>Pseudo</th>
                 <th>Nom</th>
                 <th>Prenom</th>
                 <th>Adresse</th>
@@ -23,6 +24,7 @@
                 <tr style="border-bottom: 1px solid #000">
                     <td>{{ user.typeUser }}</td>
                     <td><a href="{{ path('users_show', { 'id': user.id }) }}">{{ user.acces }}</a></td>
+                    <td>{{ user.pseudo }}</td>
                     <td>{{ user.nom }}</td>
                     <td>{{ user.prenom }}</td>
                     <td>{{ user.adresse }},<br> {{ user.cp }} <br> {{ user.ville }}</td>

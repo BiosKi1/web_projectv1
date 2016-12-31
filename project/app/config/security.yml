@@ -6,10 +6,11 @@ security:
     providers:
         in_memory:
             memory:
-        web_project:
-                    entity:
-                        class: EventNightBundle:User
-                        property: pseudo
+              users:
+                  admin:
+                      password: adm
+                      roles: 'ROLE_ADMIN'
+
 
 
     firewalls:
@@ -22,20 +23,18 @@ security:
             anonymous: ~
             http_basic: ~
             pattern:    ^/
-            provider: web_project
             # activate different ways to authenticate
 
             # http_basic: ~
             # http://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
 
             # form_login: ~
-            # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
+            # http:-//symfony.com/doc/current/cookbook/security/form_login_setup.html
 
     access_control:
             # require ROLE_ADMIN for /admin*
-            - { path: ^/admin, roles: ROLE_ADMIN }
+            - { path: ^/users/showAll, roles: ROLE_ADMIN }
 
     encoders:
             Symfony\Component\Security\Core\User\User: plaintext
-            EventNightBundle\Entity\Users:
-              algorithm: bcrypt
+
