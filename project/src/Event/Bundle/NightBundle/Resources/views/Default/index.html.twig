@@ -5,23 +5,55 @@
     {% embed "@EventNight/navbarDefault.html.twig" %}
     {% endembed %}
 
-    <div class="container-fluid text-center bg-grey">
-        <h2 style="color:#E0893C">Présentation</h2>
-        <p>Retrouvez tous vos mangakas préférés à la soirée manga du 01 février</p>
+    <div class="container-fluid text-center bg-grey ">
+        <div class="row">
+            <div class="col-xs-12" style="padding-left: 0 !important;">
+                <div class="impPreWrapper">
+                    <img class="imgPre" src="{{ asset('images/presentation.jpg') }}">
+                </div>
+                <h2 class="textePresentation">Retrouvez tous vos mangakas préférés à la soirée manga du 01 février 2017</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid text-center bg-black">
+        <div class="row">
+            <div class="col-md-8 col-lg-12">
+                <h2>Rencontrez votre Mangaka favori</h2>
+                <p>Séance de dédicace et performance en live !! </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Présence du mangaka Masahi Kishimoto auteur du manga Naruto pour une séance dédicace</h2>
+            </div>
+            <div class="col-md-4">
+                <img class="img-responsive" src="{{ asset('images/auteur/MK.jpg') }}">
+            </div>
+        </div>
     </div>
 
     <div class="container-fluid text-center bg-grey">
-        <h2>Rencontrez votre Mangaka favori</h2>
-        <p>Séance de dédicace et performance en live !! </p>
+        <div class="row">
+            <div class="col-md-8 col-lg-12">
+                <h2>Venez poser vos questions à nos partenaire</h2>
+                <p>Venez poser toutes vos questions à nos partenaires que ce soit le financement de la création d'un manga ou encore des questions sur les mangas licenciés</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid text-center bg-black">
+        <div class="row">
+            <div class="col-md-8 col-lg-12">
+                <h2>Venez assister à la remise des prix du concours de dessin</h2>
+                <p>Sélection parmis les dessins envoyé par un groupe de jury dont Masahi Kishimoto</p>
+            </div>
+        </div>
     </div>
 
     <div class="container-fluid text-center bg-grey">
-        <h2>Venez assister à la remise des prix du concours de dessin</h2>
-        <p>Sélection sur plus de 100 déssins par un groupe de jury dont Masahi Kishimoto</p>
-    </div>
-
-    <div class="container-fluid text-center bg-grey">
-        <h2 style="color:#E0893C">Déssins sélectionnés par les jury</h2>
+        <h2 style="color:#E0893C">Déssins pré-sélectionnés par les jury</h2>
         <div id="mSlide" class="carousel slide carousel-fade" data-ride="carousel" >
 
             <ol class="carousel-indicators">
@@ -32,13 +64,13 @@
 
             <div class="carousel-inner">
                 <div class="item active">
-                    <img class="img-responsive" src="{{ asset('images/img_fan/07_by_ningar-d8bky3e.jpg') }}">
+                    <img class="img-responsive imgCar" src="{{ asset('images/img_fan/07_by_ningar-d8bky3e.jpg') }}">
                 </div>
                 <div class="item">
-                    <img class="img-responsive" src="{{ asset('images/img_fan/Kaneki.Ken.full.1810432.jpg') }}">
+                    <img class="img-responsive imgCar" src="{{ asset('images/img_fan/Kaneki.Ken.full.1810432.jpg') }}">
                 </div>
                 <div class="item">
-                    <img class="img-responsive" src="{{ asset('images/img_fan/untitled_by_jesusagudo-d6vmyw7.jpg') }}">
+                    <img class="img-responsive imgCar" src="{{ asset('images/img_fan/untitled_by_jesusagudo-d6vmyw7.jpg') }}">
                 </div>
             </div>
 
@@ -50,8 +82,37 @@
             </a>
         </div>
     </div>
+
+    <div class="container-fluid bg-black">
+        <div class="row">
+            <div class="col-xs-12">
+                Nous rejoindre au salon
+                Parc des Expositions de Villepinte Paris Nord II
+                93420 Villepinte
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div id="map" style="height:400px;width:100%;"></div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
 
+{% block javascripts %}
+    <script>
+        function myMap() {
+            var mapCanvas = document.getElementById("map");
+            var mapOptions = {
+                center: new google.maps.LatLng(48.97719, 2.542867),
+                zoom: 13
+            };
+            var map = new google.maps.Map(mapCanvas, mapOptions);
+        }
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD42lxRuqYorfzaV_HIei4p5vLa4d1KeGk&callback=myMap"></script>
+{% endblock %}
 {% block footer %}
     {% embed '@EventNight/footer.html.twig'%}{% endembed %}
 {% endblock %}

@@ -68,6 +68,10 @@ Bouton font awesome
     padding-bottom: 50px;
 }
 
+.bg-grey{
+    background-color: #E4E4E4;
+}
+
 .fa-envelope-o{
     font-size:25px;
     color:#D6BE4C;
@@ -162,20 +166,20 @@ Champs carousel
 
 .carousel-control.right, .carousel-control.left {
     background-image: none;
-    color: #f4511e;
+    color: #BFD9C9;
 }
 .carousel-indicators li {
-    border-color: #f4511e;
+    border-color: #BFD9C9;
 }
 .carousel-indicators li.active {
-    background-color: #f4511e;
+    background-color: #BFD9C9;
 }
 
 /*
 Image du carousel
 */
 
-img {
+.imgCar {
     width: auto;
     height: 300px;
     max-height: 300px;
@@ -211,13 +215,29 @@ now override the 3.3 new styles for modern browsers & apply opacity
 }
 
 /*
-Ombre
+partie présentation
 */
-.overlay {
+
+
+.imgPre{
+    padding-left: 0% !important;
+    padding-right: 0% !important;
+    width: 80%;
+    opacity: 0.5;
+    height: 600px;
+}
+.textePresentation{
     position: absolute;
+    color: #e75454;
+    top: 200px;
     width: 100%;
-    height: 100%;
-    z-index: 2;
-    background-color: #080d15;
-    opacity: .7;
+
+}
+
+/*
+Google map
+*/
+#map {
+    height: 400px;
+    width: 100%;
 }
