@@ -3,6 +3,7 @@
 namespace Event\Bundle\NightBundle\Controller;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Event\Bundle\NightBundle\Entity\Users;
+
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 

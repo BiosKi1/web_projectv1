@@ -8,6 +8,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class UsersSign extends AbstractType
 {
@@ -19,6 +20,7 @@ class UsersSign extends AbstractType
         $builder
             ->add('nom')
             ->add('prenom')
+            ->add('pseudo')
             ->add('mdp')
             ->add('adresse')
             ->add('ville')
@@ -34,6 +36,7 @@ class UsersSign extends AbstractType
                     'Shônen-ai' => 'Shônen-ai',
                     'Seinen' => 'Seinen')))
             ->add('couverture',FileType::class)
+            ->add('save', SubmitType::class, array('label' => 'Inscription'))
         ;
     }
     

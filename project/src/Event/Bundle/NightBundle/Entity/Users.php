@@ -371,7 +371,7 @@ class Users
         return $this->acces;
     }
 
-    public function upload(UploadedFile $file,$id)
+    public function upload($file,$id)
     {
         $fileName = $id;
 
