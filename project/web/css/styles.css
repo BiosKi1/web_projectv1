@@ -235,6 +235,15 @@ partie présentation
 }
 
 /*
+img partenaire
+*/
+.img-part{
+    width: 500px;
+    height:200px;
+
+}
+
+/*
 Google map
 */
 #map {
