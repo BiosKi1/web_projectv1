@@ -9,9 +9,11 @@
 
                 {% if is_granted('ROLE_ADMIN') %}
                     <li><a href="{{ path('users_index') }}">Liste des participants</a></li>
+                    <li><a href="{{ path('event_night_contact') }}">Contact</a></li>
                 {% else %}
                     <li><a href="{{ path('users_index') }}">Connexion</a></li>
                     <li><a href="{{ path('users_new') }}">Inscription</a></li>
+                    <li><a href="{{ path('event_night_contact') }}">Contact</a></li>
                 {% endif %}
             </ul>
         </div>

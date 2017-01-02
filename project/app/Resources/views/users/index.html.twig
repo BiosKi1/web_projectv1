@@ -1,48 +1,73 @@
-{% extends 'EventNightBundle::base.html.twig' %}
-
+{% extends '@EventNight/backend.html.twig' %}
+{% block title %}
+    Liste des participants
+{% endblock %}
 {% block body %}
     {% embed "@EventNight/navbarDefault.html.twig" %}
     {% endembed %}
 
-    <h1>Liste d'inscrit à l'évènement</h1>
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">
+                        Liste des participants
+                    </h1>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover table-striped">
+                    <thead>
+                        <tr style="border-bottom: 1px solid #000">
+                            <th>Id</th>
+                            <th>Type d'utilisateur</th>
+                            <th>Etat de l'inscription</th>
+                            <th>Pseudo</th>
+                            <th>Nom</th>
+                            <th>Prenom</th>
+                            <th>Adresse</th>
+                            <th>Mail</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
 
-    <div>
-        <table style="text-align: center">
-            <tr style="border-bottom: 1px solid #000">
-                <th>Type d'utilisateur</th>
-                <th>Etat de l'inscription</th>
-                <th>Pseudo</th>
-                <th>Nom</th>
-                <th>Prenom</th>
-                <th>Adresse</th>
-                <th>Mail</th>
-                <th>Id</th>
-                <th>Actions</th>
-            </tr>
+                    {% for user in users %}
+                        {% if user.acces == "Accepté" %}
+                        <tr class="success">
+                        {% elseif user.acces == "Refusé" %}
+                        <tr class="danger">
+                        {% elseif user.acces == "En attente" %}
+                        <tr class="warning">
+                        {% else %}
+                        <tr class="active">
+                        {% endif %}
+                            <td>{{ user.id }}</td>
+                            <td>{{ user.typeUser }}</td>
+                            <td><a href="{{ path('users_show', { 'id': user.id }) }}">{{ user.acces }}</a></td>
+                            <td>{{ user.pseudo }}</td>
+                            <td>{{ user.nom }}</td>
+                            <td>{{ user.prenom }}</td>
+                            <td>{{ user.adresse }},<br> {{ user.cp }} <br> {{ user.ville }}</td>
+                            <td>{{ user.mail }}</td>
+                            <td>
+                                <ul>
+                                        <a href="{{ path('users_show', { 'id': user.id }) }}" data-toggle="tooltip" title="Afficher"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                </ul>
+                                <ul>
+                                        <a href="{{ path('users_edit', { 'id': user.id }) }}" data-toggle="tooltip" title="Modifier"><i class="fa fa-pencil-square" aria-hidden="true"></i></a>
 
-            {% for user in users %}
-                <tr style="border-bottom: 1px solid #000">
-                    <td>{{ user.typeUser }}</td>
-                    <td><a href="{{ path('users_show', { 'id': user.id }) }}">{{ user.acces }}</a></td>
-                    <td>{{ user.pseudo }}</td>
-                    <td>{{ user.nom }}</td>
-                    <td>{{ user.prenom }}</td>
-                    <td>{{ user.adresse }},<br> {{ user.cp }} <br> {{ user.ville }}</td>
-                    <td>{{ user.mail }}</td>
-                    <td>{{ user.id }}</td>
-                    <td>
-                        <ul>
-                                <a href="{{ path('users_show', { 'id': user.id }) }}" data-toggle="tooltip" title="Afficher"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                        </ul>
-                        <ul>
-                                <a href="{{ path('users_edit', { 'id': user.id }) }}" data-toggle="tooltip" title="Modifier"><i class="fa fa-pencil-square" aria-hidden="true"></i></a>
+                                </ul>
+                            </td>
+                        </tr>
+                    {% endfor %}
 
-                        </ul>
-                    </td>
-                </tr>
-            {% endfor %}
-
-        </table>
+                </table>
+            </div>
+        </div>
     </div>
 
+{% endblock %}
+
+{% block footer %}
+    {% embed '@EventNight/footer.html.twig'%}{% endembed %}
 {% endblock %}

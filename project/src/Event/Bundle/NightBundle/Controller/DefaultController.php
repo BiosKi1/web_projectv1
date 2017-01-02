@@ -3,9 +3,10 @@
 namespace Event\Bundle\NightBundle\Controller;
 
 
+use Event\Bundle\NightBundle\Form\ContactType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
@@ -18,6 +19,53 @@ class DefaultController extends Controller
     }
 
     /**
+     * @Route("/contact")
+     */
+    public function contactAction(Request $request)
+    {
+
+        $form = $this->createForm(ContactType::class);
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid())
+        {
+            $message = \Swift_Message::newInstance()
+                ->setSubject($form->get('Objet')->getData())
+                ->setFrom($form->get('Email')->getData())
+                ->setTo('projectece100@gmail.com')
+                ->setBody($form->get('Message')->getData());
+            $this->get('mailer')->send($message);
+
+            $this->addFlash('success', 'Envoi du mail réussi');
+        }
+
+        return $this->render('@EventNight/Default/contact.html.twig', array(
+            'form' => $form ->createView()
+        ));
+
+        /*$name = $request->request->get('contactname');
+        $email = $request->request->get('email');
+        $subject = $request->request->get('subject');
+        $body = $request->request->get('body');
+
+        $data = "";
+        if($request->request->get('submit'))
+        {
+            $message = \Swift_Message::newInstance()
+                ->setSubject($subject)
+                ->setFrom($email)
+                ->setTo('test@gmail.com')
+                ->setBody($body);
+            $this->get('mailer')->send($message);
+            $data = "thanks";
+        }
+
+        return $this->render('@EventNight/Default/contact.html.twig', array(
+            'data' => $data,
+        ));*/
+    }
+
+    /**
      * @Route("/admin")
      */
     public function adminAction()
@@ -26,20 +74,4 @@ class DefaultController extends Controller
         return $res;
     }
 
-    private function sendEmail($data){
-        $myappContactMail = 'mycontactmail@mymail.com';
-        $myappContactPassword = 'yourmailpassword';
-
-        // In this case we'll use the ZOHO mail services.
-        // If your service is another, then read the following article to know which smpt code to use and which port
-        // http://ourcodeworld.com/articles/read/14/swiftmailer-send-mails-from-php-easily-and-effortlessly
-        $transport = \Swift_SmtpTransport::newInstance('smtp.gmail.com', 465,'ssl')->setUsername('mymail@gmail.com')->setPassword('mypassword');
-
-        $mailer = \Swift_Mailer::newInstance($transport);
-        $message = \Swift_Message::newInstance('Our Code World Newsletter')
-            ->setFrom(array('mymail@gmail.com' => 'Our Code World'))
-            ->setTo(array("mail@email.com" => "mail@mail.com"))
-            ->setBody("<h1>Welcome</h1>", 'text/html');
-        $result = $mailer->send($message);
-    }
 }

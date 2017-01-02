@@ -4,27 +4,19 @@ event_night_users:
 
 event_night_homepage:
     path:     /
-    defaults: { _controller: EventNightBundle:Default:index }
+    defaults: { _controller: "EventNightBundle:Default:index" }
 
-event_night_new:
-  path: /new
-  defaults: { _controller: EventNightBundle:Users:new}
-
-event_night_show:
-  path: /show
-  defaults: { _controller: EventNightBundle:Users:show }
 event_night_admin:
   path: /admin
-  defaults: { _controller: EventNightBundle:Default:admin}
+  defaults: { _controller: "EventNightBundle:Default:admin"}
 
 event_night_login:
   path: /login
-  defaults: { _controller: EventNightBundle:Security:login}
+  defaults: { _controller: "EventNightBundle:Security:login"}
 
 event_night_logout:
   path: /logout
 
 event_night_contact:
   path: /contact
-  defaults:
-  methods: [GET, POST]
+  defaults: { _controller: "EventNightBundle:Default:contact"}

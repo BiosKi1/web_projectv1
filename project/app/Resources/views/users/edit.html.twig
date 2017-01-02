@@ -19,3 +19,7 @@
         {{ form_end(delete_form) }}
     </ul>
 {% endblock %}
+
+{% block footer %}
+    {% embed '@EventNight/footer.html.twig'%}{% endembed %}
+{% endblock %}
