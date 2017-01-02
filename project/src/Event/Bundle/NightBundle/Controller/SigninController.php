@@ -23,6 +23,7 @@ class SigninController extends AbstractType
         $builder
             ->add('nom')
             ->add('prenom')
+            ->add('pseudo')
             ->add('mdp')
             ->add('adresse')
             ->add('ville')
@@ -42,6 +43,7 @@ class SigninController extends AbstractType
         $task = new Users();
         $task->setTask('Nom');
         $task->setTask('Prenom');
+        $task->setTask('Pseudo');
         $task->setTask('Adresse');
         $task->setTask('Email');
         $task->setDueDate(new \DateTime('tomorrow'));
@@ -49,6 +51,7 @@ class SigninController extends AbstractType
         $form = $this->createFormBuilder($task)
             ->add('Nom', TextType::class)
             ->add('Prenom', TextType::class)
+            ->add('Pseudo', TextType::class)
             ->add('Adresse', TextType::class)
             ->add('Email', TextType::class)
             ->add('dueDate', DateType::class)

@@ -1,25 +1,47 @@
-{% extends 'EventNightBundle::base.html.twig' %}
+{% extends "@EventNight/base.html.twig" %}
+{% form_theme edit_form 'bootstrap_3_horizontal_layout.html.twig' %}
+
 {% block body %}
-
-    {% embed "@EventNight/navbarDefault.html.twig" %}
+    {% embed '@EventNight/navbarDefault.html.twig' %}
     {% endembed %}
-    <h1>Modification de l'utilisateur</h1>
 
-    {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input type="submit" value="Enregistrer les modifications" />
-    {{ form_end(edit_form) }}
+    {% for label, flashes in app.session.flashbag.all %}
+        {% for flash in flashes %}
+            <div class="alert alert-{{ label }}">
+                {{ flash }}
+            </div>
+        {% endfor %}
+    {% endfor %}
 
-    <lu>
-        <a href="{{ path('users_index') }}">Retour à la liste d'inscrit</a>
-    </lu>
-    <ul>
-        {{ form_start(delete_form) }}
-            <input type="submit" value="Supprimer l'utilisateur">
-        {{ form_end(delete_form) }}
-    </ul>
+    <div class="container-fluid">
+        <center style="width: 20%;margin: auto;"><h1>Modification de l'utilisateur</h1></center>
+
+        <div class="row">
+
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                {{ form_start(edit_form) }}
+                {{ form_widget(edit_form) }}
+                    <input type="submit" class="btn btn-default" value="Enregistrer les modifications" style="margin-bottom: 30px;"/>
+                {{ form_end(edit_form) }}
+            </div>
+
+            <lu>
+                <a href="{{ path('users_index') }}">Retour à la liste d'inscrit</a>
+            </lu>
+
+            <ul>
+                {{ form_start(delete_form) }}
+                <input type="submit" class="btn-danger btn" value="Supprimer l'utilisateur">
+                {{ form_end(delete_form) }}
+            </ul>
+
+        </div>
+
+
+    </div>
 {% endblock %}
 
 {% block footer %}
     {% embed '@EventNight/footer.html.twig'%}{% endembed %}
 {% endblock %}
+

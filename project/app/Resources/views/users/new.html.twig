@@ -1,16 +1,39 @@
-{% extends 'EventNightBundle::base.html.twig' %}
+{% extends "@EventNight/base.html.twig" %}
+{% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
 
 {% block body %}
-    {% embed "@EventNight/navbarDefault.html.twig" %}
+    {% embed '@EventNight/navbarDefault.html.twig' %}
     {% endembed %}
-    <h1>User creation</h1>
 
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="S'inscrire" />
-    {{ form_end(form) }}
+    {% for label, flashes in app.session.flashbag.all %}
+        {% for flash in flashes %}
+            <div class="alert alert-{{ label }}">
+                {{ flash }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                {{ form_start(form) }}
 
 
+                {{ form_end(form) }}
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <center style="width: 70%;margin: auto;box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06),0 4px 5px 0 rgba(0,0,0,0.06),0 1px 10px 0 rgba(0,0,0,0.08);padding-bottom: 25px;border-radius: 4px;">
+                    <img src="{{ asset('images/jump.jpg') }}" style="padding: 0px;margin: 0px;border-radius: 4px 4px 0px 0px;width: 100%;">
+                    <h3>Inscrivez vous pour nous rejoindre !</h3>
+                    <h6>Retrouvez tous vos mangakas préférés à la soirée manga du 01 février</h6>
+                </center>
+            </div>
+
+
+        </div>
+
+    </div>
 {% endblock %}
 
 {% block footer %}
