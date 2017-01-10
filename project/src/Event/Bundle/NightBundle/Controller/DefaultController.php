@@ -19,9 +19,6 @@ class DefaultController extends Controller
         return $this->render('EventNightBundle:Default:index.html.twig');
     }
 
-    /**
-     * @Route("/contact")
-     */
     public function contactAction(Request $request)
     {
 
@@ -33,7 +30,7 @@ class DefaultController extends Controller
             $message = \Swift_Message::newInstance()
                 ->setSubject($form->get('Objet')->getData())
                 ->setFrom($form->get('Email')->getData())
-                ->setTo('projectece100@gmail.com')
+                ->setTo($form->get('Email')->getData()) //'projectece100@gmail.com'
                 ->setBody($form->get('Message')->getData());
             $this->get('mailer')->send($message);
 
@@ -66,13 +63,10 @@ class DefaultController extends Controller
         ));*/
     }
 
-    /**
-     * @Route("/admin")
-     */
-    public function adminAction()
+    /*public function adminAction()
     {
         $res = new Response('<html><body>Admin page!</body></html>');
         return $res;
-    }
+    }*/
 
 }

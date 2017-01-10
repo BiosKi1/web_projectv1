@@ -1,0 +1,4 @@
+Event:
+  resource: "@EventNightBundle/Controller/UserRestController.php"
+  type: rest
+

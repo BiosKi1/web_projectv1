@@ -222,8 +222,8 @@ partie présentation
 .imgPre{
     padding-left: 0% !important;
     padding-right: 0% !important;
-    width: 80%;
-    opacity: 0.5;
+    width: 100%;
+
     height: 600px;
 }
 .textePresentation{
@@ -240,7 +240,13 @@ img partenaire
 .img-part{
     width: 500px;
     height:200px;
+    border-radius: 15px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    background: white;
+    border: 1px #0e0b0b solid;
 
+    margin: auto;
+    margin-top: 40px;
 }
 
 /*
@@ -250,3 +256,15 @@ Google map
     height: 400px;
     width: 100%;
 }
+
+
+
+.textePresentation{
+    color: #FFF;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    font-family: "Raleway",sans-serif;
+    letter-spacing: -0.08em;
+    font-size: 50px;
+    margin: 0;
+}
+

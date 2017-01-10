@@ -1,6 +1,9 @@
 {% extends "@EventNight/base.html.twig" %}
 {% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
 
+{% block title %}
+Contact
+{% endblock %}
 {% block body %}
     {% embed '@EventNight/navbarDefault.html.twig' %}
     {% endembed %}
@@ -27,7 +30,7 @@
                     <center style="width: 70%;margin: auto;box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06),0 4px 5px 0 rgba(0,0,0,0.06),0 1px 10px 0 rgba(0,0,0,0.08);padding-bottom: 25px;border-radius: 4px;">
                         <img src="{{ asset('images/desk.jpg') }}" style="padding: 0px;margin: 0px;border-radius: 4px 4px 0px 0px;width: 100%;">
                         <h3>N'hesitez pas à nous contacter</h3>
-                        <h6>Sur les détails de la soirée manga du 01 février</h6>
+                        <h6>Sur les détails de l'exposition manga du 01 février</h6>
                     </center>
                 </div>
 

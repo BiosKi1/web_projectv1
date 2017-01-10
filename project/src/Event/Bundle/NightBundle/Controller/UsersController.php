@@ -23,7 +23,7 @@ class UsersController extends Controller
 
         $users = $em->getRepository('EventNightBundle:Users')->findBy(
             array(),
-            array('acces'=>'ASC')
+            array('dateInsription'=>'DESC')
         );
 
         return $this->render('users/index.html.twig', array(
@@ -49,7 +49,6 @@ class UsersController extends Controller
             $file = $user->getCouverture();
 
            $user->upload($file,$someNewFilename.'.'.$file->guessExtension());
-
 
 
             return $this->redirectToRoute('users_show', array('id' => $user->getId()));

@@ -424,40 +424,25 @@ class Users
             ) = unserialize($serialized);
     }
 
-
+    /**
+     * Get the formatted name to display (NAME Firstname or username)
+     *
+     * @param $separator: the separator between name and firstname (default: ' ')
+     * @return String
+     * @VirtualProperty
+     */
+    public function getUsedName($separator = ' '){
+        if($this->getNom()!=null && $this->getPrenom()!=null){
+            return ucfirst(strtolower($this->getNom())).$separator.strtoupper($this->getNom());
+        }
+        else{
+            return $this->getPseudo();
+        }
+    }
     /**
      * @var string
      */
     private $prenom;
 
 
-    /**
-     * @var string
-     */
-    private $dateInsription;
-
-
-    /**
-     * Set dateInsription
-     *
-     * @param string $dateInsription
-     *
-     * @return Users
-     */
-    public function setDateInsription($dateInsription)
-    {
-        $this->dateInsription = $dateInsription;
-
-        return $this;
-    }
-
-    /**
-     * Get dateInsription
-     *
-     * @return string
-     */
-    public function getDateInsription()
-    {
-        return $this->dateInsription;
-    }
 }

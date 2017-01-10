@@ -20,3 +20,4 @@ event_night_logout:
 event_night_contact:
   path: /contact
   defaults: { _controller: "EventNightBundle:Default:contact"}
+

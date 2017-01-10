@@ -1,6 +1,10 @@
 {% extends 'EventNightBundle::base.html.twig' %}
 {% form_theme delete_form 'bootstrap_3_horizontal_layout.html.twig' %}
 
+{% block title %}
+    Visualiser
+{% endblock %}
+
 {% block body %}
     {% embed "@EventNight/navbarDefault.html.twig" %}
     {% endembed %}

@@ -5,3 +5,10 @@ event_night:
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+
+#REST
+rest :
+  type : rest
+  resource: "@EventNightBundle/Resources/config/routing_rest.yml"
+  prefix : /api/
+

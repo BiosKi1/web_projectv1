@@ -1,6 +1,10 @@
 {% extends "@EventNight/base.html.twig" %}
 {% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
 
+{% block title %}
+    Inscription
+{% endblock %}
+
 {% block body %}
     {% embed '@EventNight/navbarDefault.html.twig' %}
     {% endembed %}
@@ -26,7 +30,7 @@
                 <center style="width: 70%;margin: auto;box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06),0 4px 5px 0 rgba(0,0,0,0.06),0 1px 10px 0 rgba(0,0,0,0.08);padding-bottom: 25px;border-radius: 4px;">
                     <img src="{{ asset('images/jump.jpg') }}" style="padding: 0px;margin: 0px;border-radius: 4px 4px 0px 0px;width: 100%;">
                     <h3>Inscrivez vous pour nous rejoindre !</h3>
-                    <h6>Retrouvez tous vos mangakas préférés à la soirée manga du 01 février</h6>
+                    <h6>Retrouvez tous vos mangakas préférés à l'exposition manga du 01 février</h6>
                 </center>
             </div>
 

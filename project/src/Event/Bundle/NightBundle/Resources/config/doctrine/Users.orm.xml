@@ -61,6 +61,11 @@
         <option name="fixed"/>
       </options>
     </field>
+    <field name="dateInsription" type="string" column="dateInsription" >
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
     <many-to-one field="typeUser" target-entity="TypeUsers" fetch="LAZY">
       <join-columns>
         <join-column name="type_user" referenced-column-name="id"/>

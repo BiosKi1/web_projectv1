@@ -4,6 +4,7 @@ namespace Event\Bundle\NightBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -37,6 +38,9 @@ class UsersSign extends AbstractType
                     'Seinen' => 'Seinen')))
             ->add('couverture',FileType::class)
             ->add('save', SubmitType::class, array('label' => 'Inscription'))
+            ->add('dateInsription', HiddenType::class, array(
+                'attr' => array('value' => (new \DateTime())->format('Y-m-d H:i'))
+            ))
         ;
     }
     
